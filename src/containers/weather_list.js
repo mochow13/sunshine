@@ -1,11 +1,16 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Chart from '../components/sparkline';
-import GoogleMap from '../components/map'
+import GoogleMap from '../components/map';
 
 class WeatherList extends Component {
 
     renderWeather(cityData) {
+        if(!cityData) {
+            alert("Oh no not found!");
+            return;
+        }
+
         const cityName = cityData.city.name;
         // flattening the temperatures found for a city in an array
         const temps = cityData.list.map(weather => weather.main.temp);
@@ -13,6 +18,7 @@ class WeatherList extends Component {
         const humid = cityData.list.map(weather => weather.main.humidity);
         const {lon,lat} = cityData.city.coord;
         // console.log(temps);
+
         return (            
             <tr key={cityName}>
                 <td>
@@ -31,6 +37,7 @@ class WeatherList extends Component {
             </tr>
         );
     }
+
     render() {
         return (
             <table className = "table table-hover" >
