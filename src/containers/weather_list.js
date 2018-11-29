@@ -7,7 +7,7 @@ class WeatherList extends Component {
         const cityName = cityData.city.name;
         // flattening the temperatures found for a city in an array
         const temps = cityData.list.map(weather => weather.main.temp);
-        // console.log(temps);
+        console.log(temps);
         return (            
             <tr key={cityName}>
                 <td>{cityName}</td>
