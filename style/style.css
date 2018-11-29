@@ -1,0 +1,21 @@
+/* table */
+td, th {
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+/* margin for the search bar */
+.input-group {
+    margin: 20px 0px;
+}
+
+/* for the height of the sparklines */
+svg {
+    height: 160px;
+}
+
+/* for google map */
+td:first-of-type, td:first-of-type > div {
+    height: 200px;
+    width: 250px;
+}

@@ -5,7 +5,7 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 export function fetchWeather(city) {
 
-    const url = `${ROOT_URL}q=${city},bd&appid=${API_KEY}`;
+    const url = `${ROOT_URL}q=${city},us&appid=${API_KEY}`;
     const request = axios.get(url);
 
     // console.log('here');
